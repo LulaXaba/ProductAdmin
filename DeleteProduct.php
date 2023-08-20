@@ -1,31 +1,3 @@
-
-// require_once 'config.php'; // Include the configuration file
-
-// // Create connection
-// $conn = new mysqli($db_host, $db_user, $db_pass, $db_name);
-
-// // Check connection
-// if ($conn->connect_error) {
-// die("Connection failed: " . $conn->connect_error);
-// }
-
-// if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['sku'])) {
-// $sku = $_POST['sku'];
-
-// // Perform DELETE query to remove product from the database
-// $delete_query = "DELETE FROM products WHERE sku = '$sku'";
-
-// if ($conn->query($delete_query) === TRUE) {
-// echo "Product deleted successfully";
-// } else {
-// echo "Error deleting product: " . $conn->error;
-// }
-// }
-
-// // Close the database connection
-// $conn->close();
-
-
 <?php
 require_once 'config.php'; // Include the configuration file
 

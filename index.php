@@ -74,31 +74,24 @@ $result = $conn->query($sql);
 
     <!-- Start Menu -->
 
-	  <footer class="footer-area bg-10">
-       <div class="copyrigh">
-           <div class="container">
-	           <div class="row">
-		   
-		       </div>
-            </div>
-        </div>
+<footer class="footer-area bg-10">
+<div class="copyrigh">
+<div class="container">
+<div class="row">
 
-    </footer>
-	
+</div>
+</div>
+</div>
 
+</footer>
+<!-- End header -->
 
-
-
-
-	
 <!-- Display Product Cards -->
 <div class="row">
 <div class="col md-4" style="margin-bottom: 4rem;">
 <!--product list-->
 
-
 <div class="row" style="margin-bottom: 4rem; margin-top: 3rem;">
-
 <div class="col-lg-3 md-10">
 <div class="card">
 <input class="form-check-input" type="checkbox" value="" id=".delete-checkbox">

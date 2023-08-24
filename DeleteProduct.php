@@ -33,4 +33,3 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['skus'])) {
 // Close the database connection
 $conn->close();
 ?>
-

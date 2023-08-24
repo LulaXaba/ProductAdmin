@@ -63,7 +63,7 @@ $result = $conn->query($sql);
                           <a class="nav-link btn btn-outline-success" href="AddProduct.php">ADD</a>
                         </li>
 												<li class="nav-item">
-                          <button class="nav-link btn btn-outline-danger" id="mass-delete-btn">MASS DELETE</button>
+                          <button class="nav-link btn btn-outline-danger" id="mass-delete-btn">DELETE</button>
                         </li>
 					</ul>
 				</div>
@@ -93,7 +93,7 @@ $result = $conn->query($sql);
 
 <div class="row" style="margin-bottom: 4rem; margin-top: 3rem;">
 <div class="col-lg-3 md-10">
-<div class="card">
+<div class="card" id="card1">
 <input class="form-check-input" type="checkbox" value="" id=".delete-checkbox">
 <img src="images/SleeperCouch_Velvet_Alf_DarkGrey-0075.jpg" class="card-img-top" alt="...">
 <div class="card-body">
@@ -107,9 +107,13 @@ $result = $conn->query($sql);
 <?php
 if ($result->num_rows > 0) {
 while ($row = $result->fetch_assoc()) {
+// Generate a unique id with the prefix "card-"
+$card_id = uniqid("card-");
+
+// Use the id as an attribute for the card element
 echo '
 <div class="col-lg-3 md-10">     
-<div class="card">
+<div class="card" id="' . $card_id . '">
 <input class="form-check-input delete-checkbox" type="checkbox" value="' . $row['sku'] . '">
 <img src="' . $row['image_path'] . '" class="card-img-top" alt="Product Image">
 <div class="card-body">
@@ -131,14 +135,15 @@ echo "No products found.";
 	
 	<!-- Start Footer -->
 
+
     <footer class="footer-area bg-f">
 
 		<div class="copyright">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
-						<p class="LUCID"> <a href="#">Scandiweb</a> 
-					<a href="https://html.design/"> Test Assesment</a></p>
+						<p class="LUCID"> <a href="#">LULA XABA</a> 
+					<a href="https://html.design/"> -2023</a></p>
 					</div>
 				</div>
 			</div>

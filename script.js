@@ -1,98 +1,3 @@
-// LASTEST DELETE CODE, DOES'NT WORK AT ALL
-
-//  document.addEventListener("DOMContentLoaded", function () {
-//     const massDeleteButton = document.getElementById("mass-delete-btn");
-//     const deleteCheckboxes = document.querySelectorAll(".delete-checkbox");
-
-//     massDeleteButton.addEventListener("click", function () {
-//         const selectedCards = [];
-
-//         deleteCheckboxes.forEach((checkbox) => {
-//             if (checkbox.checked) {
-//                 const card = checkbox.closest(".card");
-//                 if (card) {
-//                     selectedCards.push(card);
-//                 }
-//             }
-//         });
-
-//         if (selectedCards.length > 0) {
-//             if (confirm("Are you sure you want to delete the selected products?")) {
-//                 selectedCards.forEach((card) => {
-//                     card.remove();
-//                     // Implement AJAX logic to delete the product on the server using SKU
-//                 });
-//                 alert("Products deleted successfully!");
-//             }
-//         } else {
-//             alert("Please select products to delete.");
-//         }
-//     });
-// });
-
-
-
-// useless
-
-// document.addEventListener("DOMContentLoaded", function () {
-//   const massDeleteButton = document.getElementById("mass-delete-btn");
-//   const deleteCheckboxes = document.querySelectorAll(".delete-checkbox");
-
-//   massDeleteButton.addEventListener("click", function () {
-//       const selectedSKUs = [];
-
-//       deleteCheckboxes.forEach((checkbox) => {
-//           if (checkbox.checked) {
-//               selectedSKUs.push(checkbox.value);
-//           }
-//       });
-
-//       if (selectedSKUs.length > 0) {
-//           if (confirm("Are you sure you want to delete the selected products?")) {
-//               // Send an AJAX request to your delete_products.php script
-//               // Implement the server-side logic to delete products using the selected SKUs
-//               // You can use a fetch() or XMLHttpRequest here
-//               alert("Products deleted successfully!");
-//           }
-//       } else {
-//           alert("Please select products to delete.");
-//       }
-//   });
-// });
-
-
-
-
-// document.addEventListener("DOMContentLoaded", function () {
-// const massDeleteButton = document.getElementById("mass-delete-btn");
-// const deleteCheckboxes = document.querySelectorAll(".delete-checkbox");
-
-// massDeleteButton.addEventListener("click", function () {
-// const selectedCards = [];
-
-// deleteCheckboxes.forEach((checkbox) => {
-// if (checkbox.checked) {
-// const card = checkbox.closest(".card");
-// if (card) {
-// selectedCards.push(card);
-// }
-// }
-// });
-
-// if (selectedCards.length > 0) {
-// if (confirm("Are you sure you want to delete the selected products?")) {
-// selectedCards.forEach((card) => {
-// card.remove();
-// // Implement AJAX logic to delete the product on the server using SKU
-// });
-// alert("Products deleted successfully!");
-// }
-// } else {
-// alert("Please select products to delete.");
-// }
-// });
-// });
-
 //from BING AI
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -138,3 +43,28 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+  // Add the displayImage function
+  function displayImage() {
+    const previewImage = document.getElementById("preview-image");
+    const inputFile = document.getElementById("image");
+
+    if (inputFile.files && inputFile.files[0]) {
+      const reader = new FileReader();
+
+      reader.onload = function (e) {
+        previewImage.src = e.target.result;
+        previewImage.style.display = "block";
+      };
+
+      reader.readAsDataURL(inputFile.files[0]);
+    }
+  }
+
+  // Get the input element with the id image
+  const inputFile = document.getElementById("image");
+
+  // Add an event listener to the input element
+  inputFile.addEventListener("change", function () {
+    // Call the displayImage function
+    displayImage();
+  });

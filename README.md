@@ -1,6 +1,10 @@
 # ProductAdmin
 Product Management System
 
+![ProductAdmin Preview](![image](https://github.com/LulaXaba/ProductAdmin/blob/main/images/Capture12.PNG?raw=true)
+(![image](https://github.com/LulaXaba/ProductAdmin/blob/main/images/Capture11.PNG?raw=true)
+(![image](https://github.com/LulaXaba/ProductAdmin/blob/main/images/Capture.PNG?raw=true)
+
 The Product Management System is a web application designed to facilitate the management of products within an e-commerce or inventory management context. The system allows users to add, view, update, and delete products from a database, providing a user-friendly interface for managing product information.
 
 **Key Features:**
